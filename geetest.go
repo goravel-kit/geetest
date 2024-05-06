@@ -42,23 +42,27 @@ func (r *Geetest) Verify(ticket Ticket) (bool, error) {
 			"sign_token":     hmacEncode(r.CaptchaKey, ticket.LotNumber),
 		}).
 		SetQueryParam("captcha_id", r.CaptchaID).
-		SetResult(&Success{}).
-		SetError(&Error{}).
+		ForceContentType("application/json").
+		SetResult(&Response{}).
 		Post("/validate")
 
 	if err != nil {
 		return false, err
 	}
 	if !resp.IsSuccess() {
-		return false, fmt.Errorf("%s %s", resp.Status(), resp.Error().(*Error).Msg)
+		return false, fmt.Errorf("%s %s", resp.Status(), resp.String())
 	}
 
-	res := resp.Result().(*Success)
-	if res.Result == "success" {
-		return true, nil
-	} else {
+	res := resp.Result().(*Response)
+	if res.Status != "success" {
+		return false, fmt.Errorf("%s %s", res.Code, res.Msg)
+	}
+
+	if res.Result != "success" {
 		return false, fmt.Errorf("%s", res.Reason)
 	}
+
+	return true, nil
 }
 
 func hmacEncode(key string, data string) string {
