@@ -2,7 +2,6 @@ package geetest
 
 import (
 	"testing"
-	"time"
 
 	configmocks "github.com/goravel/framework/contracts/config/mocks"
 	"github.com/stretchr/testify/suite"
@@ -33,7 +32,7 @@ func (s *GeetestTestSuite) TestVerify() {
 		LotNumber:     "12345",
 		CaptchaOutput: "12345",
 		PassToken:     "12345",
-		GenTime:       time.Now().Unix(),
+		GenTime:       "12345",
 	})
 	s.Error(err)
 	s.False(verify)

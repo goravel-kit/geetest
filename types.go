@@ -4,7 +4,7 @@ type Ticket struct {
 	LotNumber     string `json:"lot_number"`
 	CaptchaOutput string `json:"captcha_output"`
 	PassToken     string `json:"pass_token"`
-	GenTime       int64  `json:"gen_time"`
+	GenTime       string `json:"gen_time"`
 }
 
 type Response struct {

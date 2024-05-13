@@ -38,7 +38,7 @@ func (r *Geetest) Verify(ticket Ticket) (bool, error) {
 			"lot_number":     ticket.LotNumber,
 			"captcha_output": ticket.CaptchaOutput,
 			"pass_token":     ticket.PassToken,
-			"gen_time":       fmt.Sprintf("%d", ticket.GenTime),
+			"gen_time":       ticket.GenTime,
 			"sign_token":     hmacEncode(r.CaptchaKey, ticket.LotNumber),
 		}).
 		SetQueryParam("captcha_id", r.CaptchaID).
