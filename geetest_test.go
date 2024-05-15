@@ -3,7 +3,7 @@ package geetest
 import (
 	"testing"
 
-	configmocks "github.com/goravel/framework/contracts/config/mocks"
+	configmocks "github.com/goravel/framework/mocks/config"
 	"github.com/stretchr/testify/suite"
 )
 
