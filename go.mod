@@ -4,7 +4,7 @@ go 1.22
 
 require (
 	github.com/go-resty/resty/v2 v2.13.1
-	github.com/goravel/framework v1.14.1
+	github.com/goravel/framework v1.14.2
 	github.com/stretchr/testify v1.9.0
 )
 
