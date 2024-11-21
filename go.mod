@@ -3,8 +3,8 @@ module github.com/goravel-kit/geetest
 go 1.22
 
 require (
-	github.com/go-resty/resty/v2 v2.15.3
-	github.com/goravel/framework v1.14.7
+	github.com/go-resty/resty/v2 v2.16.1
+	github.com/goravel/framework v1.14.8
 	github.com/stretchr/testify v1.9.0
 )
 
