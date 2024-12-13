@@ -3,9 +3,9 @@ module github.com/goravel-kit/geetest
 go 1.22
 
 require (
-	github.com/go-resty/resty/v2 v2.15.3
-	github.com/goravel/framework v1.14.7
-	github.com/stretchr/testify v1.9.0
+	github.com/go-resty/resty/v2 v2.16.2
+	github.com/goravel/framework v1.14.9
+	github.com/stretchr/testify v1.10.0
 )
 
 require (
@@ -56,6 +56,7 @@ require (
 	github.com/go-redsync/redsync/v4 v4.8.1 // indirect
 	github.com/go-sql-driver/mysql v1.8.1 // indirect
 	github.com/go-stack/stack v1.8.0 // indirect
+	github.com/go-viper/mapstructure/v2 v2.2.1 // indirect
 	github.com/golang-jwt/jwt/v4 v4.5.0 // indirect
 	github.com/golang-jwt/jwt/v5 v5.2.1 // indirect
 	github.com/golang-migrate/migrate/v4 v4.17.1 // indirect
