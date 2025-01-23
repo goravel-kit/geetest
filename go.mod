@@ -4,7 +4,7 @@ go 1.22
 toolchain go1.22.10
 
 require (
-	github.com/go-resty/resty/v2 v2.16.3
+	github.com/go-resty/resty/v2 v2.16.5
 	github.com/goravel/framework v1.15.2
 	github.com/stretchr/testify v1.10.0
 )
